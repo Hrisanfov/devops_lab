@@ -7,3 +7,4 @@ for i in friends1:
 for k in friends2:
     if k not in friends1:
         print("Also Friend of:", k)
+

@@ -9,5 +9,6 @@ for i in ar:
 print(c)
 for k in ar[:-1]:
     if (k != ar[-1] and k != ar[0]):
-        p = p*k
+        p = p * k
 print(p)
+
