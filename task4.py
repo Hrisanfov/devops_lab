@@ -11,4 +11,3 @@ for k in ar[:-1]:
     if (k != ar[-1] and k != ar[0]):
         p = p * k
 print(p)
-
