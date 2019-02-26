@@ -4,7 +4,8 @@ import psutil
 import json
 import datetime
 
-class metrics:
+
+class metric:
     "My custom class"
     cpu = psutil.cpu_percent(interval=1)
     ram = psutil.disk_usage('/')
@@ -23,7 +24,7 @@ extent = d1[2]
 interval = int(d2[2])
 outfile = "output."
 output = outfile + extent
-test = str(metrics.cpu) + str(metrics.ram) + str(metrics.vram) + str(metrics.iops) + str(metrics.net)
+test = str(metric.cpu) + str(metric.ram) + str(metric.vram) + str(metric.iops) + str(metric.net)
 
 
 def job():
