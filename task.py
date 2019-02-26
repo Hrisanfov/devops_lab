@@ -1,5 +1,5 @@
 import requests
-
+import getpass
 
 username = 'Hrisanfov'
 password = getpass.getpass(prompt='Enter Your Git pass: ', stream=None)
