@@ -1,8 +1,4 @@
 import requests
-import configparser
-import getpass
-import base64
-import argparse
 
 
 username = 'Hrisanfov'
@@ -28,12 +24,11 @@ for i in pullspr:
     sor = sor + str(i['user']['login']) + sor2
 sor = sor.split(',')
 print(set(sor))
-l = []
+li = []
 for z in pullspr:
     if str(z['user']['login']) == 'Hrisanfov':
         print(str(z['url']))
-        l.append(str(z['url']) + '/files')
+        li.append(str(z['url']) + '/files')
 #        print(requests.get(str(z['url']) + '/files').json())
-for k in l:
+for k in li:
     print(requests.get(str(k), auth=(username, password)).json()[0]['filename'])
-
