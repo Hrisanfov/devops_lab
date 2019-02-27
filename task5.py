@@ -5,7 +5,6 @@ s3 = "zxcvbnm"
 b = 0
 c = 0
 d = 0
-# w1 = (''.join(words[0])).lower()
 for i in words:
     p = i.lower()
     for k in p:
