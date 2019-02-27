@@ -1,7 +1,7 @@
 import requests
 import getpass
 
-username = 'Hrisanfov'
+username = input("Username:", )
 password = getpass.getpass(prompt='Enter Your Git pass: ', stream=None)
 
 re = requests.get('https://api.github.com/user', auth=(username, password)).json()
