@@ -33,9 +33,8 @@ sor = sor.split(',')
 print(set(sor))
 li = []
 for z in pullspr:
-    if str(z['user']['login']) == 'Hrisanfov':
-        print(str(z['url']))
+    if z['user']['login'] == 'Hrisanfov':
+        print(z['url'])
         li.append(str(z['url']) + '/files')
-#        print(requests.get(str(z['url']) + '/files').json())
 for k in li:
     print(requests.get(str(k), auth=(username, password)).json()[0]['filename'])
