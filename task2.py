@@ -7,5 +7,4 @@ S = set()
 for i in x:
     if a * i ** 3 + b * i ** 2 + c * i + d == 0:
         S.add(i)
-
 print(" ".join([str(i) for i in S]))
