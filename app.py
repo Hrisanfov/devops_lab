@@ -6,6 +6,7 @@ import datetime
 
 
 class metric:
+    i = 0
     "My custom class"
     cpu = psutil.cpu_percent(interval=1)
     ram = psutil.disk_usage('/')
@@ -14,7 +15,6 @@ class metric:
     net = psutil.net_io_counters(pernic=True)
 
 
-i = 0
 txt = "txt"
 f = open("conf.ini")
 data = f.readlines()
@@ -31,7 +31,8 @@ def job():
     time = datetime.datetime.now()
     if extent == txt:
         with open(output, "a") as file:
-            print("SNAPSHOT {}: TIMESTAMP{}:\n".format(i + 1, time), test, file=file)
+            c = metric.i + 1
+            print("SNAPSHOT {}: TIMESTAMP{}:\n".format(c, time), test, file=file)
     else:
         with open(output, 'a') as fl:
             print(json.dump(test, fl, ensure_ascii=False))
